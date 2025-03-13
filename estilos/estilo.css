@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+        "logo nav"
+        "promo promo"
+        "book book"
+        "reviews reviews"
+        "user find";
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+header {
+    grid-area: logo;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    grid-area: nav;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+#separacion{
+    display: flex;
+    gap: 1%;
+    width: 177%;
+}
+.promo {
+    grid-area: promo;
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    width: 350%;
+}
+.promo nav {
+    margin-bottom: 15px;
+    height: 200px;
+    background-color: rgb(202, 206, 240);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 90%;
+    border: solid 1px black;
+}
+.promo-items {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.promo-items button {
+    padding: 11px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.book-now {
+    grid-area: book;
+    background: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+.book-now form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.film-reviews {
+    grid-area: reviews;
+    background: #d0d0d0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.film-reviews .now-showing, .film-reviews .coming-soon {
+    width: 45%;
+}
+.film-reviews{
+    width: 30%;
+}
+.film-reviews .film-box {
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+.user-goal {
+    grid-area: user;
+    background: #c0c0c0;
+    padding: 10px;
+    margin-right: 10px;
+}
+.find-cinema {
+    grid-area: find;
+    background: #b0b0b0;
+    padding: 10px;
+
+}
+.find-cinema form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.film-reviews,.user-goal,.find-cinema {
+    width: 80%;
+    margin-top: 5px
+}
