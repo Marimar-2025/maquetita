@@ -10,8 +10,9 @@ body {
     width: 80%;
     display: grid;
     grid-template-areas:
-        "logo nav"
-        "promo promo"
+        "logo nav1"
+        "nav2 nav2"
+        "main main"
         "book book"
         "reviews reviews"
         "user find";
@@ -24,61 +25,82 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-nav {
-    grid-area: nav;
+#nav1 {
+    grid-area: nav1;
+    justify-self:end;
 }
-nav ul {
+
+#nav1 ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
 }
+#nav2 {
+    grid-area: nav2;
+    justify-self:end;
+    gap: 30px;
+}
+
+#nav2 .botton button{
+    background: #007bff;
+    height: 40px;
+    padding-inline: 65px;
+    margin-right: 10px;
+    color: white;
+}
+.header2{
+    grid-area: nav2;
+    align-items:start;
+}
 #separacion{
-    display: flex;
-    gap: 1%;
-    width: 177%;
+    grid-area: main;
+    gap: 0%;
 }
 .promo {
-    grid-area: promo;
     background: #f0f0f0;
-    padding: 10px;
+    padding: 2px;
     text-align: center;
-    width: 350%;
+    width: 50%;
+    margin-right:10px ;
+    float: left;
 }
 .promo nav {
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     height: 200px;
     background-color: rgb(202, 206, 240);
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 90%;
+    margin-right: 1px;
     border: solid 1px black;
 }
 .promo-items {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 .promo-items button {
     padding: 11px;
     background: #007bff;
     color: white;
-    border: none;
+    border: 1px solid black ;
     cursor: pointer;
 }
+
 .book-now {
     grid-area: book;
     background: #e0e0e0;
     padding: 10px;
     text-align: center;
-    width: 100%;
+
+    border: 1px solid black ;
+  
 }
 .book-now form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
 }
 
 .film-reviews {
@@ -120,3 +142,8 @@ nav ul {
     width: 80%;
     margin-top: 5px
 }
+
+#div1{
+    width: 100%;
+}
+
