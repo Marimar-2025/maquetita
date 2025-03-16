@@ -15,7 +15,8 @@ body {
         "main main"
         "book book"
         "reviews reviews"
-        "user find";
+        "user find"
+        "footer footer";
     grid-gap: 10px;
     margin-top: 20px;
 }
@@ -38,14 +39,14 @@ header {
 }
 #nav2 {
     grid-area: nav2;
-    justify-self:end;
-    gap: 30px;
+    justify-self:flex-end;
+    gap: 10px;
 }
 
 #nav2 .botton button{
     background: #007bff;
     height: 40px;
-    padding-inline: 65px;
+    padding-inline: 30px;
     margin-right: 10px;
     color: white;
 }
@@ -58,19 +59,18 @@ header {
     gap: 0%;
 }
 .promo {
-    background: #f0f0f0;
-    padding: 2px;
+
     text-align: center;
-    width: 50%;
-    margin-right:10px ;
+    width: 55%;
+    margin-right: 20px ;
     float: left;
 }
 .promo nav {
-    margin-bottom: 1px;
+    margin-bottom: 5px;
     height: 200px;
     background-color: rgb(202, 206, 240);
     margin-left: auto;
-    margin-right: 1px;
+    margin-right: 10px;
     border: solid 1px black;
 }
 .promo-items {
@@ -79,7 +79,7 @@ header {
     gap: 10px;
 }
 .promo-items button {
-    padding: 11px;
+    padding: 10px;
     background: #007bff;
     color: white;
     border: 1px solid black ;
@@ -89,43 +89,56 @@ header {
 .book-now {
     grid-area: book;
     background: #e0e0e0;
-    padding: 10px;
-    text-align: center;
-
+    padding: 12px;
+    text-align: start;
     border: 1px solid black ;
   
 }
 .book-now form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
 
 }
-
+.book-now button{
+align-self: flex-end;
+}
+#container2{
+    display: flex;             
+    flex-direction: row;     
+    width: 100%; 
+    justify-items: start;       
+}
 .film-reviews {
     grid-area: reviews;
     background: #d0d0d0;
-    padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
 }
-.film-reviews .now-showing, .film-reviews .coming-soon {
-    width: 45%;
-}
-.film-reviews{
-    width: 30%;
+
+.now-showing{
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: end;
 }
 .film-reviews .film-box {
     background: white;
-    padding: 10px;
+    align-items: flex-start;
     margin-top: 10px;
+    height: 80px;
+    width: 330px;
+
+}
+.film-box p{
+    text-align:center;
 }
 .user-goal {
     grid-area: user;
     background: #c0c0c0;
     padding: 10px;
-    margin-right: 10px;
 }
 .find-cinema {
     grid-area: find;
@@ -138,12 +151,26 @@ header {
     flex-direction: column;
     gap: 10px;
 }
-.film-reviews,.user-goal,.find-cinema {
-    width: 80%;
-    margin-top: 5px
+.find-cinema button{
+    align-self: flex-end;
 }
+.film-reviews,.user-goal,.find-cinema {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black ; 
+    background-color: #d0d0d0 ;
 
-#div1{
-    width: 100%;
+}
+footer{
+    background-color: #007bff;
+    width:100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    margin-top: 10px;
+    grid-area: footer;
+    text-align: center ;
 }
 
